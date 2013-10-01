@@ -48,9 +48,9 @@ class Person extends bindable.Object
     @emit "decorate"
     
     
-person = new Person({ firstName: "craig", lastName: "condon" });
+person = new Person({ firstName: "craig", lastName: "condon" })
 
-console.log(person.get("fullName")); //craig condon
+console.log(person.get("fullName")) #craig condon
 
 # nothing
 person.get("classes");
