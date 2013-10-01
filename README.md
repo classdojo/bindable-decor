@@ -12,6 +12,7 @@ factory.use(decor.virtuals)
 class Person extends bindable.Object
 
   ###
+   bindings to properties on this model
   ###
   
   bindings:
@@ -31,6 +32,7 @@ class Person extends bindable.Object
     fullName: "string"
   
   ###
+   virtual properties only get called when bound to
   ###
   
   virtuals:
