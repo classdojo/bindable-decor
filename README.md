@@ -5,6 +5,7 @@ factory   = decor.factory()
 
 factory.use(decor.bindable);
 factory.use(decor.preload);
+factory.use(decor.virtuals);
 
 
 
@@ -44,4 +45,9 @@ class Person extends bindable.Object
   constructor: () ->
     super()
     factory.decorate @
+    
+    
+person = new Person({ firstName: "craig", lastName: "condon" });
+
+console.log(person.get("fullName"));
 ```
