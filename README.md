@@ -45,9 +45,6 @@ class Person extends decor.Decorable
   constructor: () ->
     super()
     
-    # decorate the model
-    @decorate()
-    
     
 person = new Person({ firstName: "craig", lastName: "condon" })
 
