@@ -3,9 +3,9 @@ decor     = require("bindable-decor")
 bindable  = require("bindable")
 factory   = decor.factory()
 
-factory.use(decor.bindable);
-factory.use(decor.preload);
-factory.use(decor.virtuals);
+factory.use(decor.bindable)
+factory.use(decor.preload)
+factory.use(decor.virtuals)
 
 
 
