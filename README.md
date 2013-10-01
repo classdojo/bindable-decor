@@ -22,6 +22,7 @@ class Person extends bindable.Object
             [firstName, lastName].join(" ")
             
   ###
+   validates the properties on this model
   ###
   
   fields:
@@ -55,4 +56,5 @@ person.get("classes");
 # trigger virtual
 person.bind("classes").to (value) ->
   console.log classes
+  
 ```
