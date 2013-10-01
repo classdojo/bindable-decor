@@ -50,5 +50,12 @@ class Person extends bindable.Object
     
 person = new Person({ firstName: "craig", lastName: "condon" });
 
-console.log(person.get("fullName"));
+console.log(person.get("fullName")); //craig condon
+
+//nothing
+person.get("classes");
+
+//trigger virtual
+person.bind("classes").to(function(value) {
+});
 ```
