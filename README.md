@@ -44,7 +44,8 @@ class Person extends bindable.Object
   
   constructor: () ->
     super()
-    factory.decorate @
+    factory.setup @
+    @emit "decorate"
     
     
 person = new Person({ firstName: "craig", lastName: "condon" });
