@@ -9,7 +9,7 @@ factory.use(decor.virtuals)
 
 
 
-class Person extends bindable.Object
+class Person extends decor.Decorable
 
   ###
    bindings to properties on this model
@@ -44,8 +44,9 @@ class Person extends bindable.Object
   
   constructor: () ->
     super()
-    factory.setup @
-    @emit "decorate"
+    
+    # decorate the model
+    @decorate()
     
     
 person = new Person({ firstName: "craig", lastName: "condon" })
