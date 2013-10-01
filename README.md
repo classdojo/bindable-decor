@@ -1,4 +1,47 @@
-bindable-decor
-==============
+```coffeescript
+decor     = require("bindable-decor")
+bindable  = require("bindable")
+factory   = decor.factory()
 
-decorators for bindable objects
+factory.use(decor.bindable);
+factory.use(decor.preload);
+
+
+
+class Person extends bindable.Object
+
+  ###
+  ###
+  
+  bindings:
+    "firstName, lastName": 
+      "fullName":
+        "map": 
+          "to": (firstName, lastName) ->
+            [firstName, lastName].join(" ")
+            
+  ###
+  ###
+  
+  fields:
+    firstName: "string"
+    lastName: "string"
+    fullName: "string"
+    
+  
+  ###
+  ###
+  
+  virtuals:
+    classes: (next) ->
+      loadClasses @, next
+    
+    
+    
+  ###
+  ###
+  
+  constructor: () ->
+    super()
+    factory.decorate @
+```
