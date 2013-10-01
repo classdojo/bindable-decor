@@ -28,7 +28,6 @@ class Person extends bindable.Object
     firstName: "string"
     lastName: "string"
     fullName: "string"
-    
   
   ###
   ###
@@ -36,8 +35,6 @@ class Person extends bindable.Object
   virtuals:
     classes: (next) ->
       loadClasses @, next
-    
-    
     
   ###
   ###
