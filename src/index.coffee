@@ -12,24 +12,25 @@ class BindableDecor
   ###
   ###
 
-  use: (options = {}) ->
-    if (type(options) is "function") or options.options or options.getOptions
-      options = {
-        factory: options
+  use: (decorators...) ->
+    for options in decorators
+      if (type(options) is "function") or options.options or options.getOptions
+        options = {
+          factory: options
+        }
+
+
+      decorator = options.clazz or options.factory or options.decorator
+
+      # getOptions = deprecated
+      unless decorator.options
+        decorator.options = decorator.getOptions
+
+      @_available.push {
+        name        : options.name or @_id++,
+        decorator   : decorator,
+        inheritable : !!options.inheritable
       }
-
-
-    decorator = options.clazz or options.factory or options.decorator
-
-    # getOptions = deprecated
-    unless decorator.options
-      decorator.options = decorator.getOptions
-
-    @_available.push {
-      name        : options.name or @_id++,
-      decorator   : decorator,
-      inheritable : !!options.inheritable
-    }
 
   ###
   ###
