@@ -1,0 +1,26 @@
+{
+  "name": "bindable-decor",
+  "version": "0.0.1",
+  "description": "```coffeescript decor     = require(\"bindable-decor\") bindable  = require(\"bindable\") factory   = decor.factory()",
+  "main": "./lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/classdojo/bindable-decor.git"
+  },
+  "author": "",
+  "license": "BSD",
+  "readmeFilename": "README.md",
+  "gitHead": "9e7ffff9c0c1197bea8e148f0b0c1377b908c4f6",
+  "devDependencies": {
+    "coffee-script": "~1.6.3",
+    "expect.js": "~0.2.0",
+    "mocha": "~1.13.0"
+  },
+  "dependencies": {
+    "bindable": "0.4.x",
+    "factories": "0.0.x"
+  }
+}
