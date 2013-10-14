@@ -9,7 +9,7 @@ factory.use(decor.virtuals)
 
 
 
-class Person extends decor.Decorable
+class Person extends bindable.Object
 
   ###
    bindings to properties on this model
@@ -47,8 +47,7 @@ class Person extends decor.Decorable
     
     
 person = new Person({ firstName: "craig", lastName: "condon" })
-
-console.log(person.get("fullName")) #craig condon
+factory.decorate(person)
 
 # nothing
 person.get("classes");
