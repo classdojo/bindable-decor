@@ -12,7 +12,7 @@ class BindableDecor
   ###
   ###
 
-  use: (decorators...) ->
+  use: (decorators...) =>
     for options in decorators
       if (type(options) is "function") or options.options or options.getOptions
         options = {
