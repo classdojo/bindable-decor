@@ -1,5 +1,5 @@
 type = require("type-component")
-Decorable = require "./decorable"
+decorable = require "./decor/decorable"
 
 class BindableDecor
 
@@ -9,6 +9,8 @@ class BindableDecor
   constructor: () ->
     @_available = []
     @_id = 0
+
+    @use decorable
 
   ###
   ###
@@ -111,7 +113,4 @@ class BindableDecor
     undefined
 
 
-
-
 module.exports = () -> new BindableDecor()
-module.exports.Decorable = Decorable
