@@ -1,4 +1,5 @@
 type = require("type-component")
+Decorable = require "./decorable"
 
 class BindableDecor
 
@@ -113,3 +114,4 @@ class BindableDecor
 
 
 module.exports = () -> new BindableDecor()
+module.exports.Decorable = Decorable

@@ -1,6 +1,6 @@
 {
   "name": "bindable-decor",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "```coffeescript decor     = require(\"bindable-decor\") bindable  = require(\"bindable\") factory   = decor.factory()",
   "main": "./lib/index.js",
   "scripts": {
@@ -21,6 +21,8 @@
   },
   "dependencies": {
     "bindable": "0.4.x",
-    "factories": "0.0.x"
+    "factories": "0.0.x",
+    "flatstack": "0.0.7",
+    "type-component": "0.0.1"
   }
 }
