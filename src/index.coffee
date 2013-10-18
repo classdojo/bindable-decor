@@ -23,7 +23,7 @@ class BindableDecor
         }
 
 
-      decorator = options.clazz or options.factory or options.decorator
+      decorator = options.clazz or options.class or options.factory or options.decorator
 
       # getOptions = deprecated
       unless decorator.options
