@@ -23,9 +23,11 @@ module.exports = {
       @callstack.push () =>
 
         @set "error", undefined
+
+        error = undefined
         
         @callstack.error (err) =>
-          @set "error", err
+          @set "error", error = err
 
         # emit the start event, and trigger any decorators
         @emit startEvent
@@ -37,5 +39,5 @@ module.exports = {
           # emit completion of given call
           @emit endEvent
           @set endState, true
-          next()
+          next error
 }
