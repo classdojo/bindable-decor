@@ -22,12 +22,10 @@ module.exports = {
       # throw the call into a queue
       @callstack.push () =>
 
-        @set "error", undefined
-
         error = undefined
         
         @callstack.error (err) =>
-          @set "error", error = err
+          error = err
 
         # emit the start event, and trigger any decorators
         @emit startEvent
