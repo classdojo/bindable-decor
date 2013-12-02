@@ -1,7 +1,6 @@
-v{
+{
   "name": "bindable-decor",
   "version": "0.1.3",
-  "description": "```coffeescript decor     = require(\"bindable-decor\") bindable  = require(\"bindable\") factory   = decor.factory()",
   "main": "./lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
